@@ -1,16 +1,21 @@
 //Cargar configuración de variables de entorno
-require('dotenv').config();
+import env from 'dotenv' //Forma actualizada
+//require('dotenv').config();
+
 //Cargar configuración para personalizar por el tipo de variable
-const { get }  = require('env-var');
+import ennvar from 'env-var' //Forma actualizada
+//const { get }  = require('env-var');
+
+env.config();
 
 //Configuramos las variables de entorno del archivo externo .env
-const envs = {
-    PORT: get('PORT').required().asPortNumber(), //seteamos a númro
-    PUBLIC_PATH: get('PUBLIC_PATH').default('public').asString()
+export const envs = {
+    PORT: ennvar.get('PORT').required().asPortNumber(), //seteamos a númro
+    PUBLIC_PATH: ennvar.get('PUBLIC_PATH').default('public').asString()
 }
 
 //Exportamos las variables configuradas
-module.exports = {
-    envs
-}
+//module.exports = {
+//    envs
+//}
 

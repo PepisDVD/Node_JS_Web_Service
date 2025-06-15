@@ -1,7 +1,10 @@
-const express = require("express") //Para impotar librería de express
-const path = require("path") //Para leer las carpetas externas
+import express from 'express'
+//const express = require("express") //Para impotar librería de express
 
-const startServer = (options) => {
+import path from 'path'
+//const path = require("path") //Para leer las carpetas externas
+
+export const startServer = (options) => {
     //Inicializamos variables
     const { port, public_path = 'public'} = options;
 
@@ -27,6 +30,6 @@ const startServer = (options) => {
 }
 
 //Exportamos config
-module.exports = {
-    startServer
-};
+//module.exports = {
+//    startServer
+//};

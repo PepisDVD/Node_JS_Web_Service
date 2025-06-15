@@ -1,6 +1,10 @@
 //Importamos de env.js
-const { envs } = require('./config/env.js')
-const { startServer } = require('./server/server.js')
+
+import { envs } from './config/env.js'
+//const { envs } = require('./config/env.js')
+
+import { startServer } from './server/server.js'
+//const { startServer } = require('./server/server.js')
 
 //Función de prueba
 const main = () => {
